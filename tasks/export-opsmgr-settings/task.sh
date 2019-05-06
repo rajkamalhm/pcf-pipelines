@@ -16,6 +16,12 @@ set -eu
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Setting Environment Variables. 
+export http_proxy=
+export https_proxy=
+export no_proxy="localhost,127.0.0.1,localaddress,.inbcu.com"
+
+
 function check_for_no_pending_changes() {
   local pending_changes_count=$(om-linux \
     --target "https://${OPSMAN_DOMAIN_OR_IP_ADDRESS}" \
