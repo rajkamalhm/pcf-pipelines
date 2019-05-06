@@ -65,6 +65,8 @@ function main() {
      --request-timeout 6000 \
      export-installation \
      --output-file "${cwd}/opsmgr-settings/${OPSMAN_SETTINGS_FILENAME}"
+     
+  echo "${cwd}/opsmgr-settings/${OPSMAN_SETTINGS_FILENAME}"
 
   dump_installations > installations-after.json
 
